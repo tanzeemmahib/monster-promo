@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Energy - UNLEASH THE BEAST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Feature 1: Scroll Animation Entry -->
+    <header class="hero">
+        <div class="video-background">
+            <!-- Feature 2: Full-screen Video Background -->
+            <video autoplay muted loop>
+                <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">UNLEASH THE BEAST</h1>
+            <div class="claw-slash"></div>
+            <!-- Feature 9: Sound FX on Hover -->
+            <div class="logo" id="monsterLogo">
+                <img src="https://logos-world.net/wp-content/uploads/2021/08/Monster-Energy-Logo.png" alt="Monster Energy">
+            </div>
+        </div>
+        
+        <!-- Feature 15: Live Counter -->
+        <div class="live-counter">
+            🔥 <span id="counter">2,193</span> Monsters consumed by visitors
+        </div>
+    </header>
+
+    <!-- Feature 3: Monster Lab -->
+    <section class="monster-lab">
+        <h2>MONSTER LAB</h2>
+        <div class="ingredients">
+            <div class="ingredient-card">
+                <h3>CAFFEINE</h3>
+                <p>160mg of pure energy fuel</p>
+            </div>
+            <div class="ingredient-card">
+                <h3>TAURINE</h3>
+                <p>2000mg amino acid power</p>
+            </div>
+            <div class="ingredient-card">
+                <h3>B-VITAMINS</h3>
+                <p>Energy metabolism boost</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 4: Psych Profile Scroll Animation -->
+    <section class="psych-profile">
+        <h2>BEAST PROFILE</h2>
+        <div class="profile-content">
+            <div class="silhouette">
+                <img src="https://via.placeholder.com/300x400/000000/00ff00?text=BEAST" alt="Beast Silhouette">
+            </div>
+            <div class="traits">
+                <ul id="traitsList">
+                    <li>🏋️ Gym rat</li>
+                    <li>🎮 Gamer</li>
+                    <li>🌙 Night owl</li>
+                    <li>🏁 Speed demon</li>
+                    <li>⚡ Energy addict</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 5: Racing Timeline -->
+    <section class="racing-timeline">
+        <h2>MONSTER TIMELINE</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">2002</div>
+                <div class="event">OG Monster Launch</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2005</div>
+                <div class="event">Motocross Domination</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2020</div>
+                <div class="event">F1 Partnership</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2023</div>
+                <div class="event">Monster x Apex Collab</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 6: Mini Game Section -->
+    <section class="mini-game">
+        <h2>MONSTER RUNNER</h2>
+        <div class="game-placeholder">
+            <p>Coming Soon</p>
+            <div class="game-sketch"></div>
+        </div>
+    </section>
+
+    <!-- Feature 8: 3D Can -->
+    <section class="can-showcase">
+        <h2>THE BEAST</h2>
+        <div class="can-container">
+            <img src="https://via.placeholder.com/300x500/000000/00ff00?text=MONSTER+CAN" alt="Monster Can" class="rotating-can" id="monsterCan">
+        </div>
+    </section>
+
+    <!-- Feature 10 & 18: Build-A-Can Generator -->
+    <section class="build-can">
+        <h2>BUILD YOUR BEAST</h2>
+        <div class="can-builder">
+            <div class="builder-controls">
+                <select id="flavorSelect">
+                    <option value="original">Original</option>
+                    <option value="mango">Mango Loco</option>
+                    <option value="ultra">Ultra White</option>
+                    <option value="pipeline">Pipeline Punch</option>
+                </select>
+                
+                <select id="taglineSelect">
+                    <option value="chaos">Fueled by Chaos</option>
+                    <option value="beast">Unleash the Beast</option>
+                    <option value="energy">Pure Energy</option>
+                    <option value="mayhem">Midnight Mayhem</option>
+                </select>
+                
+                <select id="colorSelect">
+                    <option value="green">Neon Green</option>
+                    <option value="orange">Electric Orange</option>
+                    <option value="blue">Ice Blue</option>
+                    <option value="red">Blood Red</option>
+                </select>
+                
+                <button id="buildCan">BUILD CAN</button>
+            </div>
+            
+            <div class="can-result" id="canResult">
+                <p>Your custom Monster will appear here...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 11: Can Wheel (Flavor Gallery) -->
+    <section class="flavor-gallery">
+        <h2>FLAVOR ARSENAL</h2>
+        <div class="can-wheel">
+            <div class="can-item" data-flavor="Original Green">
+                <img src="https://via.placeholder.com/200x300/00ff00/000000?text=OG" alt="Original">
+                <div class="flavor-info">Original - Classic Beast</div>
+            </div>
+            <div class="can-item" data-flavor="Ultra White">
+                <img src="https://via.placeholder.com/200x300/ffffff/000000?text=ULTRA" alt="Ultra White">
+                <div class="flavor-info">Ultra White - Zero Sugar</div>
+            </div>
+            <div class="can-item" data-flavor="Mango Loco">
+                <img src="https://via.placeholder.com/200x300/ff8c00/000000?text=MANGO" alt="Mango Loco">
+                <div class="flavor-info">Mango Loco - Tropical Chaos</div>
+            </div>
+            <div class="can-item" data-flavor="Pipeline Punch">
+                <img src="https://via.placeholder.com/200x300/ff1493/000000?text=PUNCH" alt="Pipeline Punch">
+                <div class="flavor-info">Pipeline Punch - Passion Fruit</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 12: Monster Lore -->
+    <section class="monster-lore">
+        <h2>THE LORE</h2>
+        <div class="lore-content">
+            <p class="flickering-text">The M is 666... caffeine runs through its veins. Born from the depths of energy itself, Monster awakens the beast within. Three claw marks. Infinite power. Unleash what lies dormant.</p>
+        </div>
+    </section>
+
+    <!-- Feature 13: Timeline (Racing/Gym Culture) -->
+    <section class="culture-timeline">
+        <h2>CULTURE DOMINATION</h2>
+        <div class="culture-events">
+            <div class="culture-item">• 2002: Energy drink revolution begins</div>
+            <div class="culture-item">• 2005: Motorsports takeover</div>
+            <div class="culture-item">• 2008: Gym bro adoption</div>
+            <div class="culture-item">• 2012: Gaming culture infiltration</div>
+            <div class="culture-item">• 2020: Global beast status achieved</div>
+        </div>
+    </section>
+
+    <!-- Feature 14: Personality Quiz -->
+    <section class="personality-quiz">
+        <h2>BEAST PERSONALITY TEST</h2>
+        <div class="quiz-container">
+            <div class="question" id="quizQuestion">
+                <p>What's your ideal time to consume Monster?</p>
+                <button class="quiz-btn" data-result="ultra-black">Before dawn workout</button>
+                <button class="quiz-btn" data-result="original">Midnight gaming session</button>
+                <button class="quiz-btn" data-result="mango-loco">Pre-party energy boost</button>
+            </div>
+            <div class="quiz-result" id="quizResult" style="display: none;">
+                <h3>YOUR BEAST TYPE:</h3>
+                <p id="resultText"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 16: Flavor Stats Cards -->
+    <section class="flavor-stats">
+        <h2>BEAST STATS</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>ORIGINAL</h3>
+                <div class="stat">Caffeine: 160mg</div>
+                <div class="stat">Sugar: 27g</div>
+                <div class="stat">Vibe Level: 🔥🔥🔥🔥🔥</div>
+            </div>
+            <div class="stat-card">
+                <h3>ULTRA WHITE</h3>
+                <div class="stat">Caffeine: 140mg</div>
+                <div class="stat">Sugar: 0g</div>
+                <div class="stat">Vibe Level: 🔥🔥🔥🔥</div>
+            </div>
+            <div class="stat-card">
+                <h3>MANGO LOCO</h3>
+                <div class="stat">Caffeine: 160mg</div>
+                <div class="stat">Sugar: 24g</div>
+                <div class="stat">Vibe Level: 🔥🔥🔥🔥🔥</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 17: Fan Zone Portal -->
+    <section class="fan-zone">
+        <h2>FAN ZONE</h2>
+        <div class="fan-content">
+            <p>Wallpapers, TikToks, fan art coming soon...</p>
+            <div class="fan-links">
+                <button class="fan-btn">Wallpapers</button>
+                <button class="fan-btn">TikTok</button>
+                <button class="fan-btn">Fan Art</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature 20: AI Can Generator -->
+    <section class="ai-generator">
+        <h2>AI BEAST GENERATOR</h2>
+        <div class="ai-container">
+            <input type="text" id="nameInput" placeholder="Enter your name...">
+            <button id="generateAI">GENERATE MY MONSTER</button>
+            <div class="ai-result" id="aiResult"></div>
+        </div>
+    </section>
+
+    <!-- Audio for sound effects -->
+    <audio id="crackSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
