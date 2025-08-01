@@ -1,0 +1,551 @@
+/* Feature 7: Dark Theme w/ Glow */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background-color: #000;
+    color: #00ff00;
+    overflow-x: hidden;
+}
+
+/* Feature 1: Scroll Animation Entry */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: heroEntry 2s ease-out forwards;
+    text-shadow: 0 0 20px #00ff00;
+}
+
+@keyframes heroEntry {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Feature 2: Full-screen Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.claw-slash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(45deg, transparent 40%, #00ff00 50%, transparent 60%);
+    opacity: 0.3;
+}
+
+/* Feature 9: Sound FX on Hover */
+.logo {
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo img {
+    width: 200px;
+    filter: drop-shadow(0 0 20px #00ff00);
+}
+
+/* Feature 19: Live Counter */
+.live-counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 255, 0, 0.1);
+    padding: 10px 20px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 15px #00ff00;
+}
+
+/* Feature 3: Monster Lab */
+.ingredients {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ingredient-card {
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid #00ff00;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.ingredient-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+}
+
+/* Feature 4: Psych Profile */
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.silhouette img {
+    border-radius: 10px;
+    filter: drop-shadow(0 0 20px #00ff00);
+}
+
+.traits ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.traits li {
+    margin: 1rem 0;
+    opacity: 0;
+    animation: traitAppear 0.5s ease-out forwards;
+}
+
+.traits li:nth-child(1) { animation-delay: 0.5s; }
+.traits li:nth-child(2) { animation-delay: 1s; }
+.traits li:nth-child(3) { animation-delay: 1.5s; }
+.traits li:nth-child(4) { animation-delay: 2s; }
+.traits li:nth-child(5) { animation-delay: 2.5s; }
+
+@keyframes traitAppear {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Feature 5: Racing Timeline */
+.timeline {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.timeline-item {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    background: rgba(0, 255, 0, 0.05);
+}
+
+.year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.event {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Feature 6: Mini Game */
+.game-placeholder {
+    text-align: center;
+    padding: 4rem;
+    border: 2px dashed #00ff00;
+    border-radius: 15px;
+}
+
+.game-placeholder p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.game-sketch {
+    width: 300px;
+    height: 150px;
+    background: linear-gradient(45deg, #001100, #003300);
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+.game-sketch::after {
+    content: "🏃‍♂️💨";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* Feature 8: 3D Can */
+.can-container {
+    text-align: center;
+}
+
+.rotating-can {
+    width: 300px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 30px #00ff00);
+}
+
+.rotating-can:hover {
+    transform: rotateY(15deg) scale(1.1);
+}
+
+/* Feature 10 & 18: Build-A-Can */
+.can-builder {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.builder-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.builder-controls select,
+.builder-controls button {
+    padding: 1rem;
+    background: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    font-family: 'Orbitron', monospace;
+    cursor: pointer;
+}
+
+.builder-controls button:hover {
+    background: #00ff00;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.can-result {
+    padding: 2rem;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    background: rgba(0, 255, 0, 0.1);
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Feature 11: Can Wheel */
+.can-wheel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    justify-content: center;
+}
+
+.can-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    min-width: 200px;
+}
+
+.can-item:hover {
+    transform: scale(1.1);
+}
+
+.can-item img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.flavor-info {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.can-item:hover .flavor-info {
+    opacity: 1;
+}
+
+/* Feature 12: Monster Lore */
+.flickering-text {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.8;
+    animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Feature 13: Culture Timeline */
+.culture-events {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.culture-item {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 3px solid #00ff00;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Feature 14: Personality Quiz */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.question p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.quiz-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    font-family: 'Orbitron', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-btn:hover {
+    background: #00ff00;
+    color: #000;
+    transform: scale(1.02);
+}
+
+.quiz-result {
+    padding: 2rem;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    background: rgba(0, 255, 0, 0.1);
+    margin-top: 2rem;
+}
+
+/* Feature 16: Flavor Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid #00ff00;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+}
+
+.stat {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+/* Feature 17: Fan Zone */
+.fan-content {
+    text-align: center;
+}
+
+.fan-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.fan-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fan-btn {
+    padding: 1rem 2rem;
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    font-family: 'Orbitron', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fan-btn:hover {
+    background: #00ff00;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Feature 20: AI Generator */
+.ai-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#nameInput {
+    width: 100%;
+    padding: 1rem;
+    background: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+#generateAI {
+    padding: 1rem 2rem;
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    font-family: 'Orbitron', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#generateAI:hover {
+    background: #00ff00;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.ai-result {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    background: rgba(0, 255, 0, 0.1);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Feature 15: Death Mode Styles */
+.death-mode {
+    background-color: #330000 !important;
+    color: #ff0000 !important;
+}
+
+.death-mode h1,
+.death-mode h2,
+.death-mode h3 {
+    color: #ff0000 !important;
+    text-shadow: 0 0 15px #ff0000 !important;
+}
+
+.death-mode .ingredient-card,
+.death-mode .stat-card,
+.death-mode .can-result,
+.death-mode .quiz-result,
+.death-mode .ai-result {
+    border-color: #ff0000 !important;
+    background: rgba(255, 0, 0, 0.1) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .can-builder {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .can-wheel {
+        justify-content: flex-start;
+    }
+}
